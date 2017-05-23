@@ -16,6 +16,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     yarn add lodash
     yarn add @types/lodash --dev
 
+## @ngrx/store
+    yarn add @ngrx/core @ngrx/store
+
+## @ngrx/store-devtools
+    yarn add @ngrx/store-devtools
+
+## @ngrx/effects
+    yarn add @ngrx/effects  
+
+## reselect
+    yarn add reselect
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
