@@ -4,3 +4,11 @@
   background-color: mat-color($mat-indigo, 400);
   color: white;
 }
+
+.fill-remaining {
+  flex: 1 1 auto;
+}
+
+.container-text {
+  margin-left: 10px;
+}
