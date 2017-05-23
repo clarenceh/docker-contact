@@ -5,7 +5,7 @@ let db = require('../db/db');
 
 class ContactModel {
 
-    all(): Observable<Contact> {
+    all(): Observable<Contact[]> {
 
         return Observable.create( observer => {
 

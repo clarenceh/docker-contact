@@ -2,6 +2,8 @@ let express = require('express');
 import * as _ from 'lodash';
 
 import ContactModel = require('../models/contact');
+import { ContactResponse } from '../types/contact';
+import { MetaData } from '../types/metadata';
 
 const router = express.Router();
 
@@ -11,7 +13,17 @@ router.get('/', function(req, res, next) {
 
     contactModel.all().subscribe(
         data => {
-            res.json(data);
+            let metadata = new MetaData();
+
+            // Populate container id
+            metadata.container_id = 'container_id';
+
+            let contactResponse = new ContactResponse();
+
+            contactResponse.metadata = metadata;
+            contactResponse.data = data;
+
+            res.json(contactResponse);
         },
         err => {
             console.error(err, `Error getting contacts`);
