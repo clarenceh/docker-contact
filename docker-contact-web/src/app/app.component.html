@@ -1,3 +1,5 @@
-<md-toolbar class="main-toolbar">
-  <span>Docker HK Meetup - Demo App</span>
+<md-toolbar class="main-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+    <div>Docker HK Meetup - Demo App</div>
+    <div>Container ID: {{containerId$ | async}}</div>
 </md-toolbar>
+
