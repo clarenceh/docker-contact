@@ -1,3 +1,4 @@
+let os = require('os');
 let express = require('express');
 import * as _ from 'lodash';
 
@@ -16,7 +17,7 @@ router.get('/', function(req, res, next) {
             let metadata = new MetaData();
 
             // Populate container id
-            metadata.container_id = 'container_id';
+            metadata.container_id = os.hostname();
 
             let contactResponse = new ContactResponse();
 
