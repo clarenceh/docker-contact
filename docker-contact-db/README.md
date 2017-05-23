@@ -16,3 +16,6 @@ Docker Contact App - DB Module
 
 ### Run container
     docker run --name docker-contact-db -p 5432:5432 -e POSTGRES_USER=contact -e POSTGRES_PASSWORD=Password1 -d <username>/docker-contact-db:1.0.0
+
+
+    docker run --name docker-contact-db -p 5432:5432 -e POSTGRES_USER=contact -e POSTGRES_PASSWORD=Password1 -d clarenceho/docker-contact-db
