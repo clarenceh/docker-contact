@@ -21,10 +21,12 @@ import { ContactService } from './services/contact.service';
 import { reducer } from './reducers/contact';
 import { ContactEffects } from './effects/contact';
 import { AppComponent } from './app.component';
+import { ContactListComponent } from './contact/contact-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,

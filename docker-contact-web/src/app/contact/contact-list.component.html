@@ -1,0 +1,13 @@
+<div fxLayout="column" fxLayoutAlign="center" class="contact-list-container">
+
+  <md-toolbar color="primary">Contact List</md-toolbar>
+
+  <md-card *ngFor="let contact of contacts" class="contact-card">
+    <md-card-subtitle>{{contact.email}}</md-card-subtitle>
+    <md-card-title>{{contact.first_name}}  {{contact.last_name}}</md-card-title>
+    <md-card-content>
+      Telephone: {{contact.telephone}}
+    </md-card-content>
+  </md-card>
+
+</div>

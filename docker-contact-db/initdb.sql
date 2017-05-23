@@ -9,4 +9,4 @@ CREATE TABLE contact (
 );
 
 INSERT INTO contact (first_name, last_name, email, telephone) VALUES ('Scott', 'Tigger', 'scott@abc.com', '11111111');
-INSERT INTO contact (first_name, last_name, email, telephone) VALUES ('John', 'smith', 'john@abc.com', '11111111');
+INSERT INTO contact (first_name, last_name, email, telephone) VALUES ('John', 'smith', 'john@abc.com', '22222222');

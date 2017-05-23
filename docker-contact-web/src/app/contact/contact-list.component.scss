@@ -1,0 +1,23 @@
+@import '../../styles';
+
+.contact-list-container {
+  margin-top: 10px;
+
+  md-card {
+    margin: 5px;
+  }
+
+  md-card-subtitle {
+    color: black;
+  }
+}
+
+.contact-card {
+  background-color: mat-color($mat-grey, 100);
+  color: mat-color($mat-grey, 700);
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: -1px 5px 25px -5px rgba(0,0,0,0.8);
+    transform: translate3d(0, -2px, 0);
+  }
+}
