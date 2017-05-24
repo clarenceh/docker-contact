@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-import { ContactResponse } from '../models/contact';
+import { Contact, ContactResponse } from '../models/contact';
 import { environment } from '../../environments/environment';
 
 @Injectable()
@@ -22,6 +22,21 @@ export class ContactService {
   getAll(): Observable<ContactResponse> {
 
     return this.http.get(this.contactApiEndpoint)
+      .map(res => res.json());
+
+  }
+
+  /**
+   * Add new contact
+   *
+   * @param {Contact} contact
+   * @returns {Observable<Contact>}
+   *
+   * @memberof ContactService
+   */
+  add(contact: Contact): Observable<Contact> {
+
+    return this.http.post(this.contactApiEndpoint, contact)
       .map(res => res.json());
 
   }

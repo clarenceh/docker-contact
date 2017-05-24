@@ -28,6 +28,16 @@ export function reducer(state = initialState, action: contact.Actions): State {
         contacts: contacts
       }
     }
+
+    case contact.ADD_SUCCESS: {
+      const contact: Contact = action.payload;
+
+      return {
+        container_id: state.container_id,
+        contacts: [...state.contacts, contact]
+      }
+    }
+
     default: {
       return state;
     }
@@ -35,22 +45,3 @@ export function reducer(state = initialState, action: contact.Actions): State {
   }
 
 }
-
-/*
-export const reducers = {
-  contactState: contactReducer
-}
-
-const appReducer: ActionReducer<State> = combineReducers(reducers);
-
-export function reducer(state: any, action: any) {
-  return appReducer(state, action);
-}
-
-export const getContainerId = (state: State) => {
-  console.log(`Contact reducer - state: ${JSON.stringify(state)}`);
-  return state.container_id;
-}
-
-export const getContacts = (state: State) => state.contacts;
-*/

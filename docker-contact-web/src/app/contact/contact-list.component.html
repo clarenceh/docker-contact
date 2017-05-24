@@ -1,14 +1,65 @@
+<div fxLayout="column" fxLayoutAlign="center" class="contact-form-container">
+    <md-card class="contact-form">
+      <md-card-content>
+
+      <form novalidate [formGroup]="contactForm">
+          <md-input-container class="contact-input">
+            <input mdInput formControlName="first_name" placeholder="First Name">
+            <md-error *ngIf="first_name.touched && first_name.invalid">
+              Please enter first name
+            </md-error>
+          </md-input-container>
+
+          <md-input-container class="contact-input">
+            <input mdInput formControlName="last_name" placeholder="Last Name">
+            <md-error *ngIf="last_name.touched && last_name.invalid">
+              Please enter last name
+            </md-error>
+          </md-input-container>
+
+          <md-input-container class="contact-input email-input">
+            <input mdInput formControlName="email" placeholder="Email">
+            <md-error *ngIf="email.touched && email.invalid">
+              Please enter email
+            </md-error>
+          </md-input-container>
+
+          <md-input-container class="contact-input">
+            <input mdInput formControlName="telephone" placeholder="Telephone">
+            <md-error *ngIf="telephone.touched && telephone.invalid">
+              Please enter telephone
+            </md-error>
+          </md-input-container>
+
+          <button md-raised-button color="accent" class="contact-input"
+              (click)="saveContact()" [disabled]="!contactForm.dirty || !contactForm.valid">
+            Save
+          </button>
+      </form>
+
+      </md-card-content>
+    </md-card>
+</div>
+
 <div fxLayout="column" fxLayoutAlign="center" class="contact-list-container">
 
-  <md-toolbar color="primary">Contact List</md-toolbar>
+  <md-toolbar color="primary">
+    <span>Contact List</span>
+    <span class="fill-remaining"></span>
+    <button md-fab color="accent">
+      <md-icon class="md-24">add</md-icon>
+    </button>
+  </md-toolbar>
 
-  <md-card *ngFor="let contact of contacts" class="contact-card">
-    <md-card-subtitle><md-icon fontSet="fontawesome" fontIcon="fa-envelope"></md-icon> {{contact.email}}</md-card-subtitle>
-    <md-card-title>{{contact.first_name}}  {{contact.last_name}}</md-card-title>
-    <md-card-content>
-      <p><md-icon fontSet="fontawesome" fontIcon="fa-phone"></md-icon> {{contact.telephone}}</p>
-      <p>Contact ID: {{contact.id}}</p>
-    </md-card-content>
-  </md-card>
+  <div fxLayout="row" fxLayoutWrap>
+    <md-card *ngFor="let contact of contacts" class="contact-card">
+      <md-card-subtitle><md-icon fontSet="fontawesome" fontIcon="fa-envelope"></md-icon> {{contact.email}}</md-card-subtitle>
+      <md-card-title>{{contact.first_name}}  {{contact.last_name}}</md-card-title>
+      <md-card-content>
+        <p><md-icon fontSet="fontawesome" fontIcon="fa-phone"></md-icon> {{contact.telephone}}</p>
+        <p>Contact ID: {{contact.id}}</p>
+      </md-card-content>
+    </md-card>
+  </div>
 
 </div>

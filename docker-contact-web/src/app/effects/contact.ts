@@ -23,6 +23,15 @@ export class ContactEffects {
         .map(contactResponse => new contact.LoadCompleteAction(contactResponse));
     })
 
+  @Effect()
+  add$: Observable<Action> = this.actions$
+    .ofType(contact.ADD)
+    .map(toPayload)
+    .switchMap( contactReq => {
+      return this.contactService.add(contactReq)
+        .map(savedContact => new contact.AddSuccessAction(savedContact));
+    })
+
   constructor(private actions$: Actions, private contactService: ContactService) {}
 
 }

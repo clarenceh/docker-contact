@@ -5,6 +5,7 @@
 
   md-card {
     margin: 5px;
+    width: 300px;
   }
 
   md-card-subtitle {
@@ -20,4 +21,24 @@
     box-shadow: -1px 5px 25px -5px rgba(0,0,0,0.8);
     transform: translate3d(0, -2px, 0);
   }
+}
+
+.contact-form-container {
+  margin-top: 10px;
+
+  md-card {
+    background-color: mat-color($mat-grey, 200);
+  }
+
+  .contact-input {
+    margin-left: 10px;
+  }
+
+  .email-input {
+    width: 200px;
+  }
+}
+
+.fill-remaining {
+  flex: 1 1 auto;
 }
