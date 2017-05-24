@@ -5,7 +5,7 @@ import * as _ from 'lodash';
 
 import { Contact } from '../models/contact';
 import * as fromRoot from '../reducers';
-import * as contact from '../actions/contact';
+import * as contactActions from '../actions/contact';
 
 @Component({
   selector: 'app-contact-list',
@@ -31,7 +31,6 @@ export class ContactListComponent implements OnInit {
     private store: Store<fromRoot.State>) { }
 
   ngOnInit() {
-
     this.contactForm = this.formBuilder.group({
       first_name: ['', [Validators.required]],
       last_name: ['', [Validators.required]],
@@ -47,13 +46,54 @@ export class ContactListComponent implements OnInit {
     this.contact = new Contact();
   }
 
+  setAddContactMode() {
+
+    this.formMode = 'add';
+
+    this.contact = new Contact();
+    this.contactForm.reset();
+
+  }
+
   saveContact() {
     console.log(`Save contact: ${JSON.stringify(this.contactForm.value)}`);
 
-    if (this.formMode = 'add') {
+    if (this.formMode === 'add') {
       this.contact = _.assign({}, this.contactForm.value);
-      this.store.dispatch(new contact.AddAction(this.contact));
+      this.store.dispatch(new contactActions.AddAction(this.contact));
+    } else {
+      this.contact = _.assign(this.contact, this.contactForm.value);
+      this.store.dispatch(new contactActions.UpdateAction(this.contact));
     }
+
+  }
+
+  deleteContact(contactObj: Contact) {
+
+    console.log(`Delete contact: ${JSON.stringify(contactObj)}`);
+
+    this.store.dispatch(new contactActions.DeleteAction(contactObj.id));
+
+  }
+
+  selectContact(contactObj: Contact) {
+
+    console.log(`Select contact: ${JSON.stringify(contactObj)}`);
+
+    this.contact = contactObj;
+
+    this.formMode = 'edit';
+    this.populateFormValues();
+
+  }
+
+  private populateFormValues() {
+
+    this.last_name.setValue(this.contact.last_name);
+    this.first_name.setValue(this.contact.first_name);
+    this.email.setValue(this.contact.email);
+    this.telephone.setValue(this.contact.telephone);
+
   }
 
 }

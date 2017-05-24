@@ -46,19 +46,22 @@
   <md-toolbar color="primary">
     <span>Contact List</span>
     <span class="fill-remaining"></span>
-    <button md-fab color="accent">
+    <button md-fab color="accent" (click)="setAddContactMode()">
       <md-icon class="md-24">add</md-icon>
     </button>
   </md-toolbar>
 
   <div fxLayout="row" fxLayoutWrap>
-    <md-card *ngFor="let contact of contacts" class="contact-card">
+    <md-card *ngFor="let contact of contacts" class="contact-card" (click)="selectContact(contact)">
       <md-card-subtitle><md-icon fontSet="fontawesome" fontIcon="fa-envelope"></md-icon> {{contact.email}}</md-card-subtitle>
       <md-card-title>{{contact.first_name}}  {{contact.last_name}}</md-card-title>
       <md-card-content>
         <p><md-icon fontSet="fontawesome" fontIcon="fa-phone"></md-icon> {{contact.telephone}}</p>
         <p>Contact ID: {{contact.id}}</p>
       </md-card-content>
+      <md-card-actions class="contact-card-action">
+        <button md-button color="warn" (click)="deleteContact(contact)">Delete</button>
+      </md-card-actions>
     </md-card>
   </div>
 

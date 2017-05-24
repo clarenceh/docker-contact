@@ -41,4 +41,36 @@ export class ContactService {
 
   }
 
+  /**
+   * Update contact
+   *
+   * @param {Contact} contact
+   * @returns {Observable<Contact>}
+   *
+   * @memberof ContactService
+   */
+  update(contact: Contact): Observable<Contact> {
+
+    const id = contact.id;
+
+    return this.http.put(`${this.contactApiEndpoint}/${id}`, contact)
+      .map(res => res.json());
+
+  }
+
+  /**
+   * Delete contact
+   *
+   * @param {number} id
+   * @returns {Observable<Contact>}
+   *
+   * @memberof ContactService
+   */
+  delete(id: number): Observable<Contact[]> {
+
+    return this.http.delete(`${this.contactApiEndpoint}/${id}`)
+      .map(res => res.json());
+
+  }
+
 }
