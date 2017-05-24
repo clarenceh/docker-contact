@@ -14,7 +14,7 @@
 }
 
 .contact-card {
-  background-color: mat-color($mat-grey, 100);
+  background-color: mat-color($mat-green, 300);
   color: mat-color($mat-grey, 700);
   transition: all 0.3s;
   &:hover {
@@ -27,7 +27,7 @@
   margin-top: 10px;
 
   md-card {
-    background-color: mat-color($mat-grey, 200);
+    background-color: white;
   }
 
   .contact-input {
