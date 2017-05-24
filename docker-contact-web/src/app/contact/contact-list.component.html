@@ -60,7 +60,7 @@
         <p>Contact ID: {{contact.id}}</p>
       </md-card-content>
       <md-card-actions class="contact-card-action">
-        <button md-button color="warn" (click)="deleteContact(contact)">Delete</button>
+        <button md-button color="warn" (click)="deleteContact(contact); $event.stopPropagation()">Delete</button>
       </md-card-actions>
     </md-card>
   </div>

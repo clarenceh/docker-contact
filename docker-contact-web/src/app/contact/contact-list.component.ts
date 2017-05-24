@@ -50,9 +50,12 @@ export class ContactListComponent implements OnInit {
 
     this.formMode = 'add';
 
-    this.contact = new Contact();
-    this.contactForm.reset();
+    this.resetForm();
 
+  }
+
+  resetForm() {
+    location.reload();
   }
 
   saveContact() {
@@ -73,6 +76,8 @@ export class ContactListComponent implements OnInit {
     console.log(`Delete contact: ${JSON.stringify(contactObj)}`);
 
     this.store.dispatch(new contactActions.DeleteAction(contactObj.id));
+
+    this.resetForm();
 
   }
 
