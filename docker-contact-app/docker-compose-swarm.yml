@@ -14,8 +14,30 @@ services:
     networks:
      - db
 
+  api:
+    image: clarenceho/docker-contact-api:1.0.0
+    ports:
+     - "9001:3000"
+    secrets:
+     - contact_db_passwd
+    environment:
+     - DB_HOST=db
+     - NODE_ENV=prd
+    networks:
+     - db
+     - frontend
+
+  web:
+    image: clarenceho/docker-contact-web:1.0.0
+    ports:
+     - "9000:80"
+    networks:
+     - frontend
+
 networks:
   db:
+    driver: overlay
+  frontend:
     driver: overlay
 
 secrets:
