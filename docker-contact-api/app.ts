@@ -32,7 +32,7 @@ let dbUser = process.env.DB_USER;
 let dbPassword = '';
 if (env === 'prd') {
     // Read password from secret file
-    fs.readFileSync('/run/secrets/contact_db_passwd', 'utf8').trim();
+    dbPassword = fs.readFileSync('/run/secrets/contact_db_passwd', 'utf8').trim();
 } else {
     dbPassword = process.env.DB_PASS;
 }
