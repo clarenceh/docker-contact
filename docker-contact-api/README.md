@@ -5,6 +5,8 @@ Docker Contact Demo - API Server
 * node
 * yarn
 
+> NOTE: Replace the following Docker image id with your Docker Hub id
+
 
 ### Requests (contacts)
     curl -v http://localhost:3000/contacts
@@ -22,8 +24,10 @@ Docker Contact Demo - API Server
 ## docker-contact-api docker image
 
 ### Build image
-    docker build -t <username>/docker-contact-api .
+    docker build -t clarenceho/docker-contact-api .
+    
+### Tag image
+    docker tag [image-id] clarenceho/docker-contact-api:1.0.0
 
 ### Run container
-    docker run --name docker-contact-api -p 3000:3000 -d <username>/docker-contact-api
-    
+    docker run --name docker-contact-api -p 3000:3000 -d clarenceho/docker-contact-api:1.0.0

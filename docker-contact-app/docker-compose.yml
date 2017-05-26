@@ -11,11 +11,16 @@ services:
      - POSTGRES_PASSWORD=Password1
 
   api:
-    image: clarenceho/docker-contact-api
+    image: clarenceho/docker-contact-api:1.0.0
     ports:
      - "3000:3000"
     links:
      - db:dbhost
     environment:
      - DB_HOST=dbhost
+
+  web:
+    image: clarenceho/docker-contact-web:1.0.0
+    ports:
+     - "8080:80"
 
