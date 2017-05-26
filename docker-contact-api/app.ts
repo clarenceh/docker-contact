@@ -22,6 +22,8 @@ app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.set('etag', false);
+
 // Read current env
 let env = process.env.NODE_ENV;
 

@@ -20,3 +20,6 @@ Visit Docker Playground at http://labs.play-with-docker.com
 
 ### Stack deploy
     docker stack deploy --compose-file docker-compose.yml docker-contact
+
+### Scale API servvice
+    docker service scale docker-contact_api=2
