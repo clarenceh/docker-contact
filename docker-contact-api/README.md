@@ -17,3 +17,13 @@ Docker Contact Demo - API Server
 
 ### Requests (delete contact)
     curl -v -X DELETE http://localhost:3000/contacts/3
+
+
+## docker-contact-api docker image
+
+### Build image
+    docker build -t <username>/docker-contact-api .
+
+### Run container
+    docker run --name docker-contact-api -p 3000:3000 -d <username>/docker-contact-api
+    

@@ -1,0 +1,21 @@
+version: '3.2'
+
+# NOTE: Replace the image user id with your own Docker Hub repo id
+services:
+  db:
+    image: clarenceho/docker-contact-db:1.0.0
+    ports:
+     - "5432:5432"
+    environment:
+     - POSTGRES_USER=contact
+     - POSTGRES_PASSWORD=Password1
+
+  api:
+    image: clarenceho/docker-contact-api
+    ports:
+     - "3000:3000"
+    links:
+     - db:dbhost
+    environment:
+     - DB_HOST=dbhost
+

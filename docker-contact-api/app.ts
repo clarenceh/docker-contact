@@ -27,6 +27,7 @@ let dbHost = process.env.DB_HOST;
 let dbUser = process.env.DB_USER;
 let dbPassword = process.env.DB_PASS;
 let connectionString = 'postgres://' + dbUser + ':' + dbPassword + '@' + dbHost + '/' + database;
+console.log(`DB connection string: ${connectionString}`);
 db.connect(connectionString);
 
 app.use('/contacts', contact);
