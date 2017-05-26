@@ -2,6 +2,7 @@ import express = require('express');
 import bodyParser = require('body-parser');
 import cookieParser = require('cookie-parser');
 import cors = require('cors');
+import fs = require('fs');
 
 let db = require('./db/db');
 
@@ -21,11 +22,20 @@ app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// Read current env
+let env = process.env.NODE_ENV;
+
 // Initialize DB connection
 let database = process.env.DB_DATABASE;
 let dbHost = process.env.DB_HOST;
 let dbUser = process.env.DB_USER;
-let dbPassword = process.env.DB_PASS;
+let dbPassword = '';
+if (env === 'prd') {
+    // Read password from secret file
+    fs.readFileSync('/run/secrets/contact_db_passwd', 'utf8').trim();
+} else {
+    dbPassword = process.env.DB_PASS;
+}
 let connectionString = 'postgres://' + dbUser + ':' + dbPassword + '@' + dbHost + '/' + database;
 console.log(`DB connection string: ${connectionString}`);
 db.connect(connectionString);
