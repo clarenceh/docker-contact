@@ -1,0 +1,23 @@
+version: '3.2'
+
+# Docker compose file for Swarm cluster - stack deployment
+
+# NOTE: Replace the image user id with your own Docker Hub repo id
+services:
+  db:
+    image: clarenceho/docker-contact-db:1.0.0
+    secrets:
+     - contact_db_passwd
+    environment:
+     - POSTGRES_USER=contact
+     - POSTGRES_PASSWORD_FILE=/run/secrets/contact_db_passwd
+    networks:
+     - db
+
+networks:
+  db:
+    driver: overlay
+
+secrets:
+  contact_db_passwd:
+    external: true

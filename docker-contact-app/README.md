@@ -17,3 +17,7 @@ This module contains the docker compose file for the contact demo-app
 
 ### For stop the application with docker compose
     docker-compose down
+
+## Deploy to Docker Swarm
+
+### Create secret for DB password
