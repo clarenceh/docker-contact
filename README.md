@@ -34,9 +34,10 @@ The components in the contact application will be deployed as Docker containers 
 
 ## Modules
 There are 3 modules within this application:
+
 | Module | Folder | Instructions |
 | ------ | ------ | ------------ |
-DB | docker-contact-db | ./docker-contact-db/README.md
+| DB | docker-contact-db | ./docker-contact-db/README.md |
 | API | docker-contact-api | ./docker-contact-api/README.md |
 | Web | docker-contact-web | ./docker-contact-web/README.md |
 
