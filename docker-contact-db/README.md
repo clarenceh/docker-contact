@@ -9,9 +9,6 @@ Docker Contact App - DB Module
 ### Build image
     docker build -t clarenceho/docker-contact-db .
 
-### Push image
-    docker push clarenceho/docker-contact-db
-
 ### Tag image
     docker tag [image-id] clarenceho/docker-contact-db:1.0.0
     docker push clarenceho/docker-contact-db:1.0.0

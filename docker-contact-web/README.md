@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 > NOTE: Replace the following Docker image id with your Docker Hub id
 
+### Build app for local
+    ng build
+
 ### Build app for production
     ng build --prod
 
