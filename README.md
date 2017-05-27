@@ -36,9 +36,15 @@ The components in the contact application will be deployed as Docker containers 
 There are 3 modules within this application:
 | Module | Folder | Instructions |
 | ------ | ------ | ------------ |
-| DB | docker-contact-db | ./docker-contact-db/README.md |
+DB | docker-contact-db | ./docker-contact-db/README.md
 | API | docker-contact-api | ./docker-contact-api/README.md |
 | Web | docker-contact-web | ./docker-contact-web/README.md |
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ## Application instructions (start/stop)
 * Refer to the README file in folder docker-contact-app
