@@ -1,6 +1,6 @@
 # DockerContactWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0-rc.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
 > NOTE: Replace the following Docker image id with your Docker Hub id
 
@@ -11,16 +11,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     ng build --prod
 
 ### Build image
-    docker build -t clarenceho/docker-contact-web .
+    docker image build -t clarenceho/docker-contact-web .
     
 ### Tag image
-    docker tag [image-id] clarenceho/docker-contact-web:1.0.0
+    docker image tag [image-id] clarenceho/docker-contact-web:1.0.0
 
 ### Push image
-    docker push clarenceho/docker-contact-web:1.0.0
+    docker image push clarenceho/docker-contact-web:1.0.0
 
 ### Run container
-    docker run --name docker-contact-web -p 8080:80 -d clarenceho/docker-contact-web:1.0.0
+    docker image run --name docker-contact-web -p 8080:80 -d clarenceho/docker-contact-web:1.0.0
 
 ## Project creation
     ng new docker-contact-web --style=scss

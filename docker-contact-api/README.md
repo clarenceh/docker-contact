@@ -24,13 +24,13 @@ Docker Contact Demo - API Server
 ## docker-contact-api docker image
 
 ### Build image
-    docker build -t clarenceho/docker-contact-api .
+    docker image build -t clarenceho/docker-contact-api .
     
 ### Tag image
-    docker tag [image-id] clarenceho/docker-contact-api:1.0.0
+    docker image tag [image-id] clarenceho/docker-contact-api:1.0.0
 
 ### Push image
-    docker push clarenceho/docker-contact-api:1.0.0
+    docker image push clarenceho/docker-contact-api:1.0.0
 
 ### Run container
-    docker run --name docker-contact-api -p 3000:3000 -d clarenceho/docker-contact-api:1.0.0
+    docker container run --name docker-contact-api -p 3000:3000 -d clarenceho/docker-contact-api:1.0.0
