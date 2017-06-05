@@ -5,22 +5,29 @@ services:
   db:
     image: clarenceho/docker-contact-db:1.0.0
     ports:
-     - "5432:5432"
+      - target: 5432
+        published: 5432
     environment:
-     - POSTGRES_USER=contact
-     - POSTGRES_PASSWORD=Password1
+      - POSTGRES_USER=contact
+      - POSTGRES_PASSWORD=Password1
 
   api:
     image: clarenceho/docker-contact-api:1.0.0
     ports:
-     - "3000:3000"
+      - target: 3000
+        published: 3000
     links:
-     - db:dbhost
+      - db:dbhost
     environment:
-     - DB_HOST=dbhost
+      - DB_HOST=dbhost
+      - DB_USER=contact
+      - DB_PASS=Password1
+      - DB_DATABASE=contact
+      - NODE_ENV=dev
 
   web:
     image: clarenceho/docker-contact-web:1.0.0
     ports:
-     - "8080:80"
+      - target: 80
+        published: 8080
 

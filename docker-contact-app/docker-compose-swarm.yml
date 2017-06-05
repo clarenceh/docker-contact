@@ -7,22 +7,25 @@ services:
   db:
     image: clarenceho/docker-contact-db:1.0.0
     secrets:
-     - contact_db_passwd
+      - contact_db_passwd
     environment:
-     - POSTGRES_USER=contact
-     - POSTGRES_PASSWORD_FILE=/run/secrets/contact_db_passwd
+      - POSTGRES_USER=contact
+      - POSTGRES_PASSWORD_FILE=/run/secrets/contact_db_passwd
     networks:
-     - db
+      - db
 
   api:
     image: clarenceho/docker-contact-api:1.0.0
     ports:
-     - "9001:3000"
+      - target: 3000
+        published: 9001
     secrets:
-     - contact_db_passwd
+      - contact_db_passwd
     environment:
-     - DB_HOST=db
-     - NODE_ENV=prd
+      - DB_HOST=db
+      - DB_USER=contact
+      - DB_DATABASE=contact
+      - NODE_ENV=prd
     networks:
      - db
      - frontend
@@ -30,9 +33,10 @@ services:
   web:
     image: clarenceho/docker-contact-web:1.0.0
     ports:
-     - "9000:80"
+      - target: 80
+        published: 9000
     networks:
-     - frontend
+      - frontend
 
 networks:
   db:

@@ -48,7 +48,10 @@ const connectionInfo = {
 
 // let connectionString = 'postgres://' + dbUser + ':' + dbPassword + '@' + dbHost + '/' + database;
 console.log(`DB connection info: ${JSON.stringify(connectionInfo)}`);
-db.connect(connectionInfo);
+setTimeout(() => {
+    db.connect(connectionInfo);
+}, 5000);
+
 
 app.use('/contacts', contact);
 
