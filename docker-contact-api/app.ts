@@ -38,9 +38,17 @@ if (env === 'prd') {
 } else {
     dbPassword = process.env.DB_PASS;
 }
-let connectionString = 'postgres://' + dbUser + ':' + dbPassword + '@' + dbHost + '/' + database;
-console.log(`DB connection string: ${connectionString}`);
-db.connect(connectionString);
+
+const connectionInfo = {
+  host: dbHost,
+  database: database,
+  user: dbUser,
+  password: dbPassword
+};
+
+// let connectionString = 'postgres://' + dbUser + ':' + dbPassword + '@' + dbHost + '/' + database;
+console.log(`DB connection info: ${JSON.stringify(connectionInfo)}`);
+db.connect(connectionInfo);
 
 app.use('/contacts', contact);
 

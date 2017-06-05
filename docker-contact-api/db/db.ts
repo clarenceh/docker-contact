@@ -1,4 +1,4 @@
-import Massive = require('massive');
+import massive = require('massive');
 
 module.exports = {
 
@@ -8,9 +8,18 @@ module.exports = {
         return this.connection;
     },
 
-    connect: function(dbConnectionStr) {
+    connect: function(connectionInfo) {
+        /*
         this.connection = Massive.connectSync({connectionString: dbConnectionStr});
         console.log(`Connect to Contact DB successfully`);
+        */
+
+        massive(connectionInfo).then(db => {
+            this.connection = db;
+            console.log(`Connect to Contact DB successfully`);
+        }).catch(err => {
+            console.error(`Error connecting to DB: ${JSON.stringify(err)}`);
+        });
     }
 
 }
