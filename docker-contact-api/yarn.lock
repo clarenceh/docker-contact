@@ -2,15 +2,15 @@
 # yarn lockfile v1
 
 
-"@reactivex/rxjs@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-5.4.0.tgz#87eb67e8e6a4fbe8ee07ee4ea94c1fa928ba1691"
+"@reactivex/rxjs@^5.4.1":
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-5.4.1.tgz#e472c38c84eb411690f281253d3a93a3466ad041"
   dependencies:
     symbol-observable "^1.0.1"
 
-"@types/body-parser@^1.16.3":
-  version "1.16.3"
-  resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.3.tgz#bc2b9a181f2fa85c80f1ecacd8a05cf1414b85a3"
+"@types/body-parser@^1.16.4":
+  version "1.16.4"
+  resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.4.tgz#96f3660e6f88a677fee7250f5a5e6d6bda3c76bb"
   dependencies:
     "@types/express" "*"
     "@types/node" "*"
@@ -37,22 +37,22 @@
   version "0.31.34"
   resolved "https://registry.yarnpkg.com/@types/es6-shim/-/es6-shim-0.31.34.tgz#6ef768f9899d2f5aca2c19d19a96f637f2a16430"
 
-"@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.0.45":
-  version "4.0.45"
-  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.45.tgz#71bb1f87d7187482d0d8851f5b294458e1c78667"
+"@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.0.48":
+  version "4.0.48"
+  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.48.tgz#b4fa06b0fce282e582b4535ff7fac85cc90173e9"
   dependencies:
     "@types/node" "*"
 
-"@types/express@*", "@types/express@^4.0.35":
-  version "4.0.35"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.35.tgz#6267c7b60a51fac473467b3c4a02cd1e441805fe"
+"@types/express@*", "@types/express@^4.0.36":
+  version "4.0.36"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.36.tgz#14eb47de7ecb10319f0a2fb1cf971aa8680758c2"
   dependencies:
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/lodash@^4.14.65":
-  version "4.14.65"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.65.tgz#a0f78d71ffcd3c02628d5f616410c98c424326d5"
+"@types/lodash@^4.14.66":
+  version "4.14.66"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.66.tgz#3dbb83477becf130611f8fac82a8fdb199805981"
 
 "@types/mime@*":
   version "0.0.29"
@@ -1070,7 +1070,7 @@ lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
 
-manakin@0.4:
+manakin@^0.4.7:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/manakin/-/manakin-0.4.7.tgz#41ca449b55bea9c4c4fecec393b9c4d63818fc3f"
 
@@ -1078,15 +1078,15 @@ map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
 
-massive@^3.0.0-rc1:
-  version "3.0.0-rc1"
-  resolved "https://registry.yarnpkg.com/massive/-/massive-3.0.0-rc1.tgz#02035b20d399f2d3a96d0cc1ff665fac7b507c9f"
+massive@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/massive/-/massive-3.0.0.tgz#076d6628ed58e170c261167ff8384362427f23cd"
   dependencies:
     commander "^2.6.0"
     glob "^7.1.1"
     lodash "^4.17.4"
     mz "^2.6.0"
-    pg-promise "^5.7.1"
+    pg-promise "^5.9.6"
     pg-query-stream "^1.0.0"
 
 media-typer@0.3.0:
@@ -1360,12 +1360,12 @@ pg-minify@0.4:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/pg-minify/-/pg-minify-0.4.2.tgz#c75b4b5878960fb09c3b9a4d4eb1036aea7ea0e3"
 
-pg-promise@^5.7.1:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-5.9.0.tgz#bd635150fbad6e1fa55f96bc6321c79a29b20054"
+pg-promise@^5.9.6:
+  version "5.9.7"
+  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-5.9.7.tgz#4c78f58061cf04d6afa86baacf0bdd0cf8281c8e"
   dependencies:
-    manakin "0.4"
-    pg "5.1"
+    manakin "^0.4.7"
+    pg "^5.1.0"
     pg-minify "0.4"
     spex "1.2"
 
@@ -1386,7 +1386,7 @@ pg-types@1.*:
     postgres-date "~1.0.0"
     postgres-interval "~1.0.0"
 
-pg@5.1:
+pg@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/pg/-/pg-5.1.0.tgz#073b9b36763ad8a5478dbb85effef45e739ba9d8"
   dependencies:
