@@ -19,7 +19,7 @@ Visit Docker Playground at http://labs.play-with-docker.com
 > passwd.txt is the file containing the secret
 
 ### Stack deploy
-    docker stack deploy --compose-file docker-compose-swarm.yml docker-contact
+    docker stack deploy --compose-file docker-compose-swarm.yml contact
 
 ### Scale API servvice
     docker service scale docker-contact_api=2
