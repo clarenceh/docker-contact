@@ -8,7 +8,7 @@ This is a simple contact management application that allows users to add/update/
 The contact information is stored in a PostgreSQL DB. There is a database called "contact" and table called "contact" which store contact information.
 
 ### REST API backend
-The contact application contains a REST Api component which expose all contact related operations via various REST endpoints. The application was developed with the following tools and language:
+The contact application contains a REST API component which expose all contact related operations via various REST endpoints. The application was developed with the following tools and language:
 * NodeJS (please use Node version 7.*)
 * Express
 * TypeScript
