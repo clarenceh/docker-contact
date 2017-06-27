@@ -16,7 +16,7 @@ class ContactModel {
     save(contact: Contact): Observable<Contact> {
 
         const dbconn: massive.Database = db.get();
-        return Observable.fromPromise(<Promise<Contact>>dbconn.contact.save(contact));
+        return Observable.fromPromise(dbconn.contact.save(contact));
 
     }
 
