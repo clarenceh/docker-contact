@@ -24,6 +24,8 @@ router.get('/', function(req, res, next) {
             contactResponse.metadata = metadata;
             contactResponse.data = data;
 
+            console.log(`Contacts retrieved successfully - response: ${JSON.stringify(contactResponse)}`);
+
             res.json(contactResponse);
         },
         err => {

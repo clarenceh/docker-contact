@@ -54,6 +54,12 @@
   version "4.14.66"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.66.tgz#3dbb83477becf130611f8fac82a8fdb199805981"
 
+"@types/massive@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/massive/-/massive-3.0.1.tgz#e2923eae408aa6c922d888ea44fbcee0c6e2e924"
+  dependencies:
+    "@types/node" "*"
+
 "@types/mime@*":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"

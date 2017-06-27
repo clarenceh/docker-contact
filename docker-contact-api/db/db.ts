@@ -8,7 +8,7 @@ module.exports = {
         return this.connection;
     },
 
-    connect: function(connectionInfo) {
+    connect: function(connectionInfo: object | string) {
         /*
         this.connection = Massive.connectSync({connectionString: dbConnectionStr});
         console.log(`Connect to Contact DB successfully`);

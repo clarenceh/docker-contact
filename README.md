@@ -9,7 +9,7 @@ The contact information is stored in a PostgreSQL DB. There is a database called
 
 ### REST Api backend
 The contact application contains a REST Api component which expose all contact related operations via various REST endpoints. The application was developed with the following tools and language:
-* NodeJS
+* NodeJS (please use Node version 7.*)
 * Express
 * TypeScript
 
