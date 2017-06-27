@@ -16,7 +16,7 @@ The contact application contains a REST Api component which expose all contact r
 ### Web Frontend
 The frontend is a web application for users to view and manage contact information. It was developed with the following framework and language:
 * Angular (version 4)
-* Angular Material
+* Angular Material (version 2 beta)
 * Angular CLI
 * TypeScript
 
