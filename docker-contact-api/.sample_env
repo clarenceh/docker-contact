@@ -1,0 +1,5 @@
+DB_HOST=localhost
+DB_USER=contact
+DB_PASS=Password1
+DB_DATABASE=contact
+NODE_ENV=dev
