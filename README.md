@@ -4,16 +4,16 @@ Docker Meetup HK 2017 July - Demo Contact Application
 ## Application Description
 This is a simple contact management application that allows users to add/update/delete contacts information from a web browser frontend. The application include the following components:
 
-### Database
+### Database (docker-contact-db)
 The contact information is stored in a PostgreSQL DB. There is a database called "contact" and table called "contact" which store contact information.
 
-### REST API backend
+### REST API backend (docker-contact-api)
 The contact application contains a REST API component which expose all contact related operations via various REST endpoints. The application was developed with the following tools and language:
 * NodeJS (please use Node version 7.*)
 * Express
 * TypeScript
 
-### Web Frontend
+### Web Frontend (docker-contact-web)
 The frontend is a web application for users to view and manage contact information. It was developed with the following framework and language:
 * Angular (version 4)
 * Angular Material (version 2 beta)
