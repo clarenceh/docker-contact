@@ -7,6 +7,10 @@ Docker Contact Demo - API Server
 
 > NOTE: Replace the following Docker image id with your Docker Hub id
 
+### Run the application
+    cp .sample_env .env
+    tsc
+    yarn start
 
 ### Requests (contacts)
     curl -v http://localhost:3000/contacts
