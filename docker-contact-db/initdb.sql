@@ -8,5 +8,5 @@ CREATE TABLE contact (
     CONSTRAINT ux_contact_2 UNIQUE(email)
 );
 
-INSERT INTO contact (first_name, last_name, email, telephone) VALUES ('Scott', 'Tigger', 'scott@abc.com', '11111111');
+INSERT INTO contact (first_name, last_name, email, telephone) VALUES ('Scott', 'Tiger', 'scott@abc.com', '11111111');
 INSERT INTO contact (first_name, last_name, email, telephone) VALUES ('John', 'Smith', 'john@abc.com', '22222222');
