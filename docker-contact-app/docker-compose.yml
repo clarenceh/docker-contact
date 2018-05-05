@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.3'
 
 # NOTE: Replace the image user id with your own Docker Hub repo id
 services:
@@ -16,10 +16,8 @@ services:
     ports:
       - target: 3000
         published: 3000
-    links:
-      - db:dbhost
     environment:
-      - DB_HOST=dbhost
+      - DB_HOST=db
       - DB_USER=contact
       - DB_PASS=Password1
       - DB_DATABASE=contact
